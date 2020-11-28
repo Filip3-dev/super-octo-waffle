@@ -1,0 +1,105 @@
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+img{
+  border-radius: 100%;
+  float: left;
+}
+/* ------------------------flex--------------------------------- */
+.flexb{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.i{
+  padding-right: 10px;
+}
+.flexb1{
+  display: flex;
+  flex-direction: column;
+}
+.ft{
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.fb{
+  font-size: 15px;
+  opacity: 70%;
+}
+.op{
+  opacity: 50%;
+}
+/* ------------------------grid--------------------------- */
+.container{
+  display: grid;
+  margin: 50px 20px;
+  grid-gap: 30px;
+  grid-template-areas:
+  "b1 b1 b1 b1 b1 b1 b1 b1 s1 s1 v1 v1"
+  "s2 s2 b2 b2 b2 b2 b2 b2 b2 b2 v1 v1";
+}
+.horizontal-big1{
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  grid-area: b1;
+  background-color: hsl(263, 55%, 52%);
+  box-shadow: 2px 2px 10px grey;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position:  80% 0;
+  background-size: 170px;
+}
+.horizontal-big2{
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  grid-area: b2;
+  background-color: hsl(219, 29%, 14%);
+  box-shadow: 2px 2px 10px grey;
+}
+.vertical-big{
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  grid-area: v1;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 2px 2px 10px grey;
+}
+.small1{
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  grid-area: s1;
+  background: hsl(217, 19%, 35%);
+  box-shadow: 2px 2px 10px grey;
+}
+.small2{
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  grid-area: s2;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 2px 2px 10px grey;
+}
+/* -----------------media query-------------- */
+@media only screen and (max-width: 830px) {
+  .container{
+    grid-template-areas:
+    " b1 "
+    " s1 "
+    " s2 "
+    " b2 "
+    " v1 ";
+    margin: 50px;
+  }
+}
